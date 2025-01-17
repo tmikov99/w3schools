@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="modalBoxes.css" /> 
+</head>
+
+<body>
+    <div class="modal" id="modal">
+        <div class="modalBox">
+            <span id="closeBtn">&times;</span>
+            <div class="header"><h2>Modal Header</h2></div>
+            <div class="content">
+                <p>Hello World!</p>
+                <p>Modals are awesome!</p>
+            </div>
+            <div class="footer">
+                <p>Modal Footer</p>
+            </div>
+        </div>
+    </div>
+    <button id="openBtn">Open Modal</button>
+
+    <script>
+        let openBtn = document.getElementById("openBtn");
+        let closeBtn = document.getElementById("closeBtn");
+        let modal = document.getElementById("modal");
+
+        openBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+        closeBtn.onclick = () => modal.style.display = "none";
+
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

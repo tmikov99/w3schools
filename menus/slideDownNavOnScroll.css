@@ -1,0 +1,60 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+
+    --scrollbar-height: 59px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.page {
+    height: 200rem;
+    padding: 2rem;
+}
+
+.fixedMenu {
+    position: fixed;
+    top: -60px;
+    width: 100%;
+    background-color: var(--secondary);
+    overflow: hidden;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.fixedMenu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    float: left;
+    padding: 1rem;
+}
+
+.fixedMenu a:hover {
+    color: black;
+    background-color: var(--paper);
+}

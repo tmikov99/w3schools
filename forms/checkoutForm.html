@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="checkoutForm.css" /> 
+</head>
+
+<body>
+    <div class="cartColumn">
+        <div class="cart">
+            <h4>Cart <span><b><i class="fa-solid fa-cart-shopping"></i> 4</b></span></h4>
+            <p><a href="#">Item 1</a><span>$15</span></p>
+            <p><a href="#">Item 2</a><span>$5</span></p>
+            <p><a href="#">Item 3</a><span>$8</span></p>
+            <p><a href="#">Item 4</a><span>$2</span></p>
+            <hr>
+            <p>Total<span><b>$30</b></span></p>
+        </div>
+    </div>
+    <form class="billingForm">
+        <div class="formColumn">
+            <h2>Billing Address</h2>
+            <div class="section">
+                <label for="fullName"><i class="fa-solid fa-user"></i> Full Name</label>
+                <input type="text" name="fullName" placeholder="John M. Doe">
+            </div>
+            <div class="section">
+                <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+                <input type="email" name="email" placeholder="john@example.com">
+            </div>
+            <div class="section">
+                <label for="address"><i class="fa-solid fa-address-card"></i> Address</label>
+                <input type="text" name="address" placeholder="542 W. 15th Street">
+            </div>
+            <div class="section">
+                <label for="city"><i class="fa-solid fa-building-columns"></i> City</label>
+                <input type="text" name="city" placeholder="New York">
+            </div>
+            <div class="section half">
+                <label for="state">State</label>
+                <input type="text" mame="state" placeholder="NY">
+            </div>
+            <div class="section half">
+                <label for="zip">Zip</label>
+                <input type="number" mame="zip" placeholder="10001">
+            </div>
+        </div>
+        <div class="formColumn">
+            <h2>Payment</h2>
+            <div class="section">
+                <label for="cards">Accepted Cards</label>
+                <div class="cardList">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-discover"></i>
+                </div>
+            </div>
+            <div class="section">
+                <label for="cardName">Name on Card</label>
+                <input type="text" name="cardName" placeholder="John More Doe">
+            </div>
+            <div class="section">
+                <label for="cardNumber">Credit Card Number<label>
+                <input type="text" name="cardName" placeholder="1111-2222-3333-4444">
+            </div>
+            <div class="section">
+                <label for="cardMonth">Exp Month</label>
+                <input type="text" name="cardMonth" placeholder="September">
+            </div>
+            <div class="section half">
+                <label for="cardYear">Exp Year</label>
+                <input type="number" mame="cardYear" placeholder="2018">
+            </div>
+            <div class="section half">
+                <label for="cvv">CVV</label>
+                <input type="number" mame="cvv" placeholder="352">
+            </div>
+        </div>
+        <div class="formFooter">
+            <label>
+                <input type="checkbox" checked> Shipping address same as billing 
+            </label>
+            <button class="checkoutBtn">Continue to checkout</button>
+        </div>
+    </form>
+</body>
+
+</html>

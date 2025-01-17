@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="imageGrid.css" /> 
+</head>
+
+<body>
+    <div class="buttons">
+        <a class="countBtn selected" onclick="setGridSize(this, '')">1</a>
+        <a class="countBtn" onclick="setGridSize(this, 'medium')">2</a>
+        <a class="countBtn" onclick="setGridSize(this, 'big')">4</a>
+    </div>
+    <div class="container" id="imgGrid">
+        <div class="column">
+            <img src="../pictures/wedding.jpg">
+            <img src="../pictures/rocks.jpg">
+            <img src="../pictures/falls2.jpg">
+            <img src="../pictures/paris.jpg">
+            <img src="../pictures/img_nature.jpg">
+            <img src="../pictures/mist.jpg">
+            <img src="../pictures/paris.jpg">
+        </div>
+        <div class="column">
+            <img src="../pictures/underwater.jpg">
+            <img src="../pictures/ocean.jpg">
+            <img src="../pictures/wedding.jpg">
+            <img src="../pictures/mountainskies.jpg">
+            <img src="../pictures/rocks.jpg">
+            <img src="../pictures/underwater.jpg">
+        </div>
+        <div class="column">
+            <img src="../pictures/wedding.jpg">
+            <img src="../pictures/rocks.jpg">
+            <img src="../pictures/falls2.jpg">
+            <img src="../pictures/paris.jpg">
+            <img src="../pictures/img_nature.jpg">
+            <img src="../pictures/mist.jpg">
+            <img src="../pictures/paris.jpg">
+        </div>
+        <div class="column">
+            <img src="../pictures/underwater.jpg">
+            <img src="../pictures/ocean.jpg">
+            <img src="../pictures/wedding.jpg">
+            <img src="../pictures/mountainskies.jpg">
+            <img src="../pictures/rocks.jpg">
+            <img src="../pictures/underwater.jpg">
+        </div>
+    </div>
+
+    <script>
+        function setGridSize(button, size) {
+            let imgGrid = document.getElementById("imgGrid");
+            imgGrid.setAttribute("size", size);
+            markButton(button);
+        }
+        function markButton(button) {
+            let buttons = document.getElementsByClassName("countBtn");
+            for(let i = 0; i < buttons.length; i++) {
+                buttons[i].className = "countBtn";
+            }
+            button.className += " selected";
+        }
+    </script>
+</body>
+
+</html>

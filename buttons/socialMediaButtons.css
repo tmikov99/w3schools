@@ -1,0 +1,139 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+    --gray-custom-dark: #262626;
+    --gray-custom-light: #818181;
+    --blue-custom-hover: #0b7dda;
+    --green-custom-hover: #3e8e41;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 8px;
+}
+
+.container a {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container a:hover {
+    opacity: 0.7;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.facebook {
+    background-color: var(--facebook);
+}
+
+.twitter {
+    background-color: var(--twitter);
+}
+
+.google {
+    background-color: var(--google);
+}
+
+.linkedin {
+    background-color: var(--linkedin);
+}
+
+.youtube {
+    background-color: var(--youtube);
+}
+
+.instagram {
+    background-color: var(--instagram);
+}
+
+.pinterest {
+    background-color: var(--pinterest);
+}
+
+.snapchat {
+    background-color: var(--snapchat);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.skype {
+    background-color: var(--skype);
+}
+
+.android {
+    background-color: var(--android);
+}
+
+.dribble {
+    background-color: var(--dribble);
+}
+
+.vimeo {
+    background-color: var(--vimeo);
+}
+
+.tumblr {
+    background-color: var(--tumblr);
+}
+
+.vine {
+    background-color: var(--vine);
+}
+
+.foursquare {
+    background-color: var(--foursquare);
+}
+
+.stumbleupon {
+    background-color: var(--stumbleupon);
+}
+
+.flickr {
+    background-color: var(--flickr);
+}
+
+.yahoo {
+    background-color: var(--yahoo);
+}
+
+.reddit {
+    background-color: var(--reddit);
+}
+
+.rss {
+    background-color: var(--rss);
+}

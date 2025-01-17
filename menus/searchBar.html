@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="searchBar.css" /> 
+</head>
+
+<body>
+    <div class="bar">
+        <a class="active">Home</a>
+        <a>About</a>
+        <a>Contact</a>
+        <button onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input id="searchInput" type="text" placeholder="Search...">
+    </div>
+
+    <script>
+        function search() {
+            let searchTerm = document.getElementById("searchInput").value;
+            console.log("Search: ", searchTerm);
+        }
+    </script>
+</body>
+
+</html>

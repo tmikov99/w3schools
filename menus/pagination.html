@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="pagination.css" /> 
+</head>
+
+<body>
+    <div class="pagination">
+        <a href="#" onclick="pageDown()">&laquo;</a>
+        <a href="#" onclick="goToPage(1)" class="pageBtn" id="page-1">1</a>
+        <a href="#" onclick="goToPage(2)" class="pageBtn" id="page-2">2</a>
+        <a href="#" onclick="goToPage(3)" class="pageBtn" id="page-3">3</a>
+        <a href="#" onclick="goToPage(4)" class="pageBtn" id="page-4">4</a>
+        <a href="#" onclick="goToPage(5)" class="pageBtn" id="page-5">5</a>
+        <a href="#" onclick="goToPage(6)" class="pageBtn" id="page-6">6</a>
+        <a href="#" onclick="pageUp()">&raquo;</a>
+    </div>
+
+    <script>
+        let page = 1;
+        let pageCount = document.getElementsByClassName("pageBtn").length;
+
+        updatePage();
+
+        function pageUp() {
+            if (page < pageCount) {
+                page += 1;
+                updatePage();
+            }
+        }
+        function pageDown() {
+            if (page > 1) {
+                page -= 1;
+                updatePage();
+            }
+        }
+        function goToPage(pageNum) {
+            if (page !== pageNum) {
+                page = pageNum;
+                updatePage();
+            }
+        }
+
+        function updatePage() {
+            let selectedPage = document.getElementById(`page-${page}`);
+            let allPages = document.getElementsByClassName("pageBtn");
+            for (let i = 0; i < allPages.length; i++) {
+                allPages[i].classList.remove("selected");
+            }
+            selectedPage.classList.add("selected")
+        }
+    </script>
+</body>
+
+</html>

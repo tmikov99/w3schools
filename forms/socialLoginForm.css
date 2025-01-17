@@ -1,0 +1,182 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+    --gray-custom-dark: #262626;
+    --gray-custom-light: #818181;
+    --blue-custom-hover: #0b7dda;
+    --green-custom-hover: #3e8e41;
+    --red-custom-hover: #da190b;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.socialForm {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 5rem auto;
+    background-color: var(--paper);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.socialForm .divider {
+    position: absolute;
+    height: 100%;
+    /* width: 4px; */
+    /* border ceneters inner div */
+    border: 2px solid var(--paperFocus);
+    border-radius: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--paperFocus);
+}
+
+.socialForm .divider .dividerItem {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* padding: .5rem; */
+    width: 2rem;
+    height: 2rem;
+    line-height: 1.75rem;
+    text-align: center;
+    border: 1px solid var(--paperFocus);
+    border-radius: 50%;
+    color: var(--gray-custom);
+    background-color: var(--paper);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.socialForm h2 {
+    color: black;
+    padding: 0 1rem;
+}
+
+.socialForm .section {
+    flex: 50%;
+    padding: 0 2rem;
+}
+
+.socialForm .socialBtn, .socialForm input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: start;
+    font-size: 16px;
+}
+
+.socialForm .socialBtn {
+    color: white;
+    cursor: pointer;
+}
+
+.socialForm .socialBtn:hover {
+    opacity: 0.9;
+}
+
+.facebook {
+    background-color: var(--facebook);
+}
+
+.twitter {
+    background-color: var(--twitter);
+}
+
+.google {
+    background-color: var(--google);
+}
+
+.login {
+    background-color: var(--green-custom);
+    text-align: center !important;
+}
+
+/* .login:hover {
+    background-color: var(--green-custom-hover);
+} */
+
+.fa-brands {
+    width: 1rem;
+}
+
+.socialForm h2, .socialForm .footer {
+    flex: 100%;
+}
+
+.footer {
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.footer a {
+    color: white;
+    background-color: var(--gray-custom);
+    padding: 1rem;
+    width: 50%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer a:hover {
+    background-color: var(--gray-custom-light);
+}
+/* 
+@media screen and (max-width: 1100px) {
+    .socialForm .section {
+        flex: 100%;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .footer a {
+        width: 100%;
+    }
+} */
+
+.socialForm.shrink .section {
+    flex: 100%;
+}
+
+.socialForm.shrink .divider {
+    display: none;
+}
+
+.socialForm.shrink .footer a {
+    width: 100%;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="scrollToTopButton.css" /> 
+</head>
+
+<body>
+    <!-- <div class="scrollWrapper"> -->
+    <div class="scrollBox">
+        <div class="btnWrapper">
+            <button id="topBtn" onclick="scrollToTop()">Top</button>
+        </div>
+        
+        <div class="header">Scroll Down</div>
+        <div class="page">
+            <p>This example demonstrates how to create a "scroll to top" button that becomes visible when the user starts to scroll the page.</p>
+        </div>
+    </div>
+    <!-- <button id="topBtn3">Top 3</button> -->
+    <!-- <button id="topBtn2">Top 2</button>
+    </div> -->
+
+    <script>
+        const scrollTriggerPx = 100;
+        let showScroll = false;
+
+        let scrollBoxList = document.getElementsByClassName("scrollBox");
+        for (let i = 0; i < scrollBoxList.length; i++) {
+            scrollBoxList[i].addEventListener("scroll", (event) => {
+                let scrollBox = event.target;
+                if (scrollBox.scrollTop > scrollTriggerPx && !showScroll) {
+                    // let scrollButton = document.getElementById("topBtn");
+                    let scrollButton = scrollBox.querySelector("#topBtn");
+                    scrollButton && scrollButton.classList.add("show");
+                    showScroll = true;
+                } else if (scrollBox.scrollTop < scrollTriggerPx && showScroll) {
+                    // let scrollButton = document.getElementById("topBtn");
+                    let scrollButton = scrollBox.querySelector("#topBtn");
+                    scrollButton && scrollButton.classList.remove("show");
+                    showScroll = false;
+                }
+            })
+        }
+
+        function scrollToTop() {
+            let scrollBox = document.getElementsByClassName("scrollBox")[0]
+            scrollBox.scroll({top:0, left:0, behavior: "smooth"});
+        }
+    </script>
+</body>
+
+</html>

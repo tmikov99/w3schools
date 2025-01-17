@@ -1,0 +1,170 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+    --gray-custom-dark: #262626;
+    --gray-custom-light: #818181;
+    --blue-custom-hover: #0b7dda;
+    --green-custom-hover: #3e8e41;
+    --red-custom-hover: #da190b;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    height: 100%;
+}
+
+.openBtn {
+    font-size: 18px;
+    background-color: var(--blue-custom);
+    cursor: pointer;
+    border: none;
+    padding: 1rem 1.5rem;
+    color: white;
+}
+
+.openBtn:hover {
+    background-color: var(--blue-custom-hover);
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.modalContent {
+    width: 50%;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 5rem auto;
+    background-color: white;
+    cursor: auto;
+}
+
+.imgContainer {
+    padding: 1rem 1rem 0;
+}
+
+.imgContainer img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.inputContainer {
+    padding: 1rem;
+}
+
+.footer {
+    background-color: var(--paper);
+    border-top: 1px solid var(--paperHover);
+}
+
+.x-button {
+    color: var(--paperHover);
+    padding: .5rem;
+    font-size: 36px;
+    border: none;
+    line-height: 36px;
+    width: 52px;
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+    background-color: white;
+    cursor: pointer;
+}
+
+.x-button:hover {
+    background-color: var(--paperHover);
+    color: white;
+}
+
+input[type=text], input[type=password] {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--paperHover);
+}
+
+button[type=submit] {
+    padding: .5rem;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    font-size: 17px;
+    margin-bottom: 1rem;
+}
+
+button[type=submit]:hover {
+    background-color: var(--green-custom-hover);
+}
+
+label {
+    color: var(--paperFocus);
+}
+
+.cancelBtn {
+    background-color: var(--red-custom);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+}
+
+.cancelBtn:hover {
+    background-color: var(--red-custom-hover);
+}
+
+.psw {
+    color: black;
+    font-size: 16px;
+    float: right;
+    padding: .5rem 1rem;
+}
+
+.psw a {
+    cursor: pointer;
+    color: inherit;  
+}
+
+.psw a:hover {
+    color: var(--primary);
+}

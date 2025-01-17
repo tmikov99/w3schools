@@ -1,0 +1,105 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+    --gray-custom-dark: #262626;
+    --gray-custom-light: #818181;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.imageContainer {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.imageContainer .slide {
+    display: none;
+}
+
+.imageContainer img {
+    width: 100%;
+    display: block;
+}
+
+.imageIndex {
+    position: absolute;
+    top: 0;
+    padding: .5rem;
+    font-size: 12px;
+}
+
+.imgTitle {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--gray-custom-dark);
+}
+
+.navBtn {
+    position: absolute;
+    top: 50%;
+    padding: 1rem;
+    font-size: 24px;
+    margin-top: -61px;
+    cursor: pointer;
+    user-select: none; /*NO DOUBLE CLICK MARKING*/
+
+}
+
+.navBtn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.nextBtn {
+    right: 0;
+}
+
+/* no flexbox */
+/* .previewList .previewImg {
+    display: block;
+    width: 16.66%;
+    float: left;
+    cursor: pointer;
+    opacity: 0.6;
+} */
+
+/* flexbox */
+.previewList {
+    display: flex;
+}
+
+.previewList .previewImg {
+    display: block;
+    flex: 1;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+
+.previewList .previewImg:hover, .previewImg.active {
+    opacity: 1;
+}

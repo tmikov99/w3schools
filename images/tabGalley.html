@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="tabGallery.css" /> 
+</head>
+
+<body>
+    <div class="gallerySelect">
+        <div class="imageBtn" onclick="showFull('img_1')">
+            <img src="../pictures/img_nature.jpg">
+        </div>
+        <div class="imageBtn" onclick="showFull('img_2')">
+            <img src="../pictures/img_snow.jpg">
+        </div>
+        <div class="imageBtn" onclick="showFull('img_3')">
+            <img src="../pictures/img_mountains.jpg">
+        </div>
+        <div class="imageBtn" onclick="showFull('img_4')">
+            <img src="../pictures/img_lights.jpg">
+        </div>
+    </div>
+
+    <div class="galleryFull" id="img_1">
+        <a class="closeBtn" onclick="hideFull('img_1')">&times;</a>
+        <img src="../pictures/img_nature.jpg">
+        <div class="imgTitle">Nature</div>
+    </div>
+    <div class="galleryFull" id="img_2">
+        <a class="closeBtn" onclick="hideFull('img_2')">&times;</a>
+        <img src="../pictures/img_snow.jpg">
+        <div class="imgTitle">Snow</div>
+    </div>
+    <div class="galleryFull" id="img_3">
+        <a class="closeBtn" onclick="hideFull('img_3')">&times;</a>
+        <img src="../pictures/img_mountains.jpg">
+        <div class="imgTitle">Mountains</div>
+    </div>
+    <div class="galleryFull" id="img_4">
+        <a class="closeBtn" onclick="hideFull('img_4')">&times;</a>
+        <img src="../pictures/img_lights.jpg">
+        <div class="imgTitle">Northern Lights</div>
+    </div>
+
+    <script>
+        function showFull(id) {
+            let imgList = document.getElementsByClassName("galleryFull");
+            let selected = document.getElementById(id);
+
+            for (let i = 0; i< imgList.length; i++) {
+                imgList[i].classList.remove("show")
+            }
+            selected.classList.add("show");
+        }
+
+        function hideFull(id) {
+            let selected = document.getElementById(id);
+            selected.classList.remove("show");
+        }
+    </script>
+</body>
+
+</html>

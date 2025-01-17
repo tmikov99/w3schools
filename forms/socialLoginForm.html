@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="socialLoginForm.css" /> 
+    <link rel="stylesheet" href="../brandColors.css" />
+</head>
+
+<body>
+    <form class="socialForm" id="myForm">
+        <h2>Login with Social Media or Manually</h2>
+        <div class="content">
+            <div class="section">
+                <button class="socialBtn facebook"><i class="fa-brands fa-facebook-f"></i> Login with Facebook</button>
+                <button class="socialBtn twitter"><i class="fa-brands fa-twitter"></i> Login with Twitter</button>
+                <button class="socialBtn google"><i class="fa-brands fa-google"></i> Login with Google+</button>
+            </div>
+            <div class="divider">
+                <div class="dividerItem">or</div>
+            </div>
+            <div class="section">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button type="submit" class="socialBtn login">Login</button>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="#sign-up">Sign Up</a>
+            <a href="#forgot-password">Forgot Password?</a>
+        </div>
+    </form>
+
+    <script>
+        let form = document.getElementById("myForm");
+        let state = "show";
+        console.log(form)
+        form.addEventListener("resize", function handleResize(event) {
+            console.log("resize" + event.target)
+        })
+
+        new ResizeObserver(handleFormResize).observe(form);
+        function handleFormResize(item) {
+            if (item[0].contentRect.width < 550) {
+                !form.classList.contains("shrink") && form.classList.add("shrink");
+            } else {
+                form.classList.contains("shrink") && form.classList.remove("shrink");
+            }
+        }
+    </script>
+</body>
+
+</html>

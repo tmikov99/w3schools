@@ -1,0 +1,79 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+    --gray-custom-dark: #262626;
+    --gray-custom-light: #818181;
+    --blue-custom-hover: #0b7dda;
+    --green-custom-hover: #3e8e41;
+    --red-custom-hover: #da190b;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+form {
+    width: 50%;
+    margin: 5rem auto;
+    border: 3px solid var(--paper);
+    border-radius: 6px;
+    padding: 0 2rem 2rem;
+}
+
+.iconInput {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.iconInput input {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 16px;
+    border: 1px solid gray;
+}
+
+.iconInput i {
+    font-size: 16px;
+    padding: 1rem;
+    background-color: var(--blue-custom);
+    
+}
+
+.registerBtn {
+    width: 100%;
+    display: block;
+    background-color: var(--blue-custom);
+    padding: 1rem;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.registerBtn:hover {
+    background-color: var(--blue-custom-hover);
+}

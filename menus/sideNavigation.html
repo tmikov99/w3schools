@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sideNavigation.css" /> 
+</head>
+
+<body>
+    <div class="page">
+        <div id="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeOverlay()"><i class="fa-solid fa-x"></i></a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contacts</a>
+        </div>
+        <div id="dim"></div>
+        <button onclick="openOverlay()">Sidenav overlay</button>
+        <button onclick="openOverlayNoAnimation()">Sidenav overlay without animation</button>
+        <button onclick="openOverlayPush()">Sidenav push (off canvas)</button>
+        <button onclick="openOverlayPushOpacity()">Sidenav push w/opactity</button>
+        <button onclick="openOverlayFull()">Sidenav full-width</button>
+    </div>
+
+    <script>
+        function openOverlay() {
+            let overlay = document.getElementById("overlay");
+            overlay.classList.add("show");
+            // overlay.style.width = "15rem";
+            // overlay.style.display = "block";
+        }
+
+        function openOverlayNoAnimation() {
+            let overlay = document.getElementById("overlay");
+            overlay.classList.add("show");
+            overlay.classList.add("noAnimation");
+            // overlay.style.width = "15rem";
+            // overlay.style.display = "block";
+        }
+
+        function openOverlayPush() {
+            openOverlay();
+            let page = document.getElementsByClassName("page")[0];
+            page.classList.add("overlayOpen");
+        }
+
+        function openOverlayPushOpacity() {
+            openOverlayPush();
+            let dim = document.getElementById("dim");
+            dim.classList.add("show");
+        }
+
+        function closeOverlay() {
+            let overlay = document.getElementById("overlay");
+            let page = document.getElementsByClassName("page")[0];
+            let dim = document.getElementById("dim");
+            overlay.classList.remove("show");
+            //Only for testing
+            if (overlay.classList.contains("noAnimation")) {
+                setTimeout(()=>overlay.classList.remove("noAnimation"), 100);
+            } 
+            if (overlay.classList.contains("full")) {
+                overlay.classList.remove("full");
+            }
+            if (page.classList.contains("overlayOpen")) {
+                page.classList.remove("overlayOpen");
+            }       
+            if (dim.classList.contains("show")) {
+                dim.classList.remove("show");
+            }    
+        }
+
+        function openOverlayFull() {
+            let overlay = document.getElementById("overlay");
+            overlay.classList.add("full");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bottomBorderNavLinks.css" /> 
+</head>
+
+<body>
+    <div class="navLinks">
+        <a class="active">Home</a>
+        <a>News</a>
+        <a>Contact</a>
+    </div>
+    <script>
+        let menu = document.getElementsByClassName("navLinks")[0];
+        let links = menu.getElementsByTagName('a');
+        for (let i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", clickLink);
+        }
+
+        function clickLink(event) {
+            let menu = document.getElementsByClassName("navLinks")[0];
+            let linkList = menu.getElementsByTagName('a');
+            for (let i = 0; i < links.length; i++) {
+                linkList[i].classList.remove("active");
+            }
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

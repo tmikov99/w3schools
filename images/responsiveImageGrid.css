@@ -1,0 +1,62 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+    --gray-custom-dark: #262626;
+    --gray-custom-light: #818181;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container img {
+    display: block;
+    width: 100%;
+    padding: .25rem;
+}
+
+.container .column {
+    flex: 100%;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+    .container .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 1100px) {   
+    .container .column {
+        flex: 25%;
+        max-width: 25%;
+    }
+}

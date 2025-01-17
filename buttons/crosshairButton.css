@@ -1,0 +1,119 @@
+:root {
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+
+    --button-size: 64px;
+    --button-line-height: 6px;
+    --button-line-width: calc(var(--button-size) / 2);
+    
+    --button-grow: 5px;
+    --button-shrink: 8px;
+    --button-hover-offset: calc((var(--button-grow) * -1));
+    --button-active-offset: var(--button-shrink);
+
+    --button-translate-origin: calc(var(--button-line-height) / 2);
+    --button-translate-length: calc(var(--button-size) - var(--button-line-height));
+
+    --button-translate-length-hover: calc(var(--button-translate-length) - var(--button-hover-offset));
+    --button-translate-length-active: calc(var(--button-translate-length) - var(--button-active-offset));
+
+    --sqrt2: 0.41421356237;
+    --margin-min: calc((var(--button-line-height) / 2 ) * var(--sqrt2));
+    --margin-grow: calc(var(--margin-min) + var(--button-grow));
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+}
+
+.crosshairButton {
+    position: relative;
+    margin: var(--margin-min);
+    width: var(--button-size);
+    height: var(--button-size);
+    cursor: pointer;
+}
+
+.crosshairButton.no-overflow-grow {
+    margin: var(--margin-grow);
+}
+
+.crosshairButton div {
+    height: var(--button-line-height);
+    background-color: var(--paper);
+    position: absolute;
+    transition: .2s;
+}
+
+.crosshairButton .line {
+    width: var(--button-line-width);
+    border-radius: calc(var(--button-line-height) / 4);
+    transform-origin: var(--button-translate-origin) var(--button-translate-origin);
+}
+
+.crosshairButton .dot {
+    width: var(--button-line-height);
+    height: var(--button-line-height);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+/* default */
+.crosshairButton .line.one {
+    transform: rotate(45deg);
+}
+
+.crosshairButton .line.two {
+    transform: translate(var(--button-translate-length), 0) rotate(135deg);
+}
+
+.crosshairButton .line.three {
+    transform: translate(var(--button-translate-length), var(--button-translate-length)) rotate(-135deg);
+}
+
+.crosshairButton .line.four {
+    transform: translate(0, var(--button-translate-length)) rotate(-45deg);
+}
+
+.crosshairButton:hover .line.one {
+    transform: translate(var(--button-hover-offset), var(--button-hover-offset)) rotate(45deg) ;
+}
+
+/* onhover */
+.crosshairButton:hover .line.two {
+    transform: translate(var(--button-translate-length-hover), var(--button-hover-offset)) rotate(135deg);
+}
+
+.crosshairButton:hover .line.three {
+    transform: translate(var(--button-translate-length-hover), var(--button-translate-length-hover)) rotate(-135deg);
+}
+
+.crosshairButton:hover .line.four {
+    transform: translate(var(--button-hover-offset), var(--button-translate-length-hover)) rotate(-45deg);
+}
+
+/* onpress */
+.crosshairButton:active .line.one {
+    transform: translate(var(--button-active-offset), var(--button-active-offset)) rotate(45deg) ;
+}
+
+.crosshairButton:active .line.two {
+    transform: translate(var(--button-translate-length-active), var(--button-active-offset)) rotate(135deg);
+}
+
+.crosshairButton:active .line.three {
+    transform: translate(var(--button-translate-length-active), var(--button-translate-length-active)) rotate(-135deg);
+}
+
+.crosshairButton:active .line.four {
+    transform: translate(var(--button-active-offset), var(--button-translate-length-active)) rotate(-45deg);
+}

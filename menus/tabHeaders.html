@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="tabHeaders.css" /> 
+</head>
+
+<body>
+    <div class="content" id="london">
+        <h1>London</h1>
+        <p>London is the capital city of England.</p>
+    </div>
+    <div class="content" id="paris">
+        <h1>Paris</h1>
+        <p>Paris is the capital of France.</p>
+    </div>
+    <div class="content" id="tokyo">
+        <h1>Tokyo</h1>
+        <p>Tokyo is the capital of japan.</p>
+    </div>
+    <div class="content" id="oslo">
+        <h1>Oslo</h1>
+        <p>Oslo is the capital of Norway.</p>
+    </div>
+    <div class="nav">
+        <a class="tablink" onclick="selectTab('london', this, '#f44336')" id="default">London</a>
+        <a class="tablink" onclick="selectTab('paris', this, '#04AA6D')">Paris</a>
+        <a class="tablink" onclick="selectTab('tokyo', this, '#2196F3')">Tokyo</a>
+        <a class="tablink" onclick="selectTab('oslo', this, '#ff5722')">Oslo</a>
+    </div>
+
+    <script>
+        document.getElementById("default").click();
+        function selectTab(cityName, button, color) {
+            let contentList = document.getElementsByClassName("content");
+            let buttonList = document.getElementsByClassName("tablink");
+
+            for(let i = 0; i < contentList.length; i++) {
+                contentList[i].style.display = "none";
+            }
+
+            for(let i = 0; i < buttonList.length; i++) {
+                buttonList[i].style.backgroundColor = "";
+                buttonList[i].style.color = "black";
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            button.style.backgroundColor = color;
+            button.style.color = "white";
+        }
+    </script>
+</body>
+
+</html>

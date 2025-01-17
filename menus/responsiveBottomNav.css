@@ -1,0 +1,82 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.page {
+    padding: 1rem;
+}
+
+.bottomNav {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--secondary);
+    font-size: 18px;
+}
+
+.bottomNav a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    float: left;
+    cursor: pointer;
+}
+
+.bottomNav a:hover {
+    background-color: var(--background);
+}
+
+.bottomNav a.active {
+    background-color: var(--primary);
+    cursor: default;
+}
+
+.bottomNav a.menuButton {
+    float: right;
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .bottomNav a.menuButton {
+        display: block;
+    }
+
+    .bottomNav a:not(.active, .menuButton) {
+        display: none;
+    }
+
+    .bottomNav.expand a {
+        display: block;
+        float: none;
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="tabs.css" /> 
+</head>
+
+<body>
+    <div class="tabBar">
+        <a class="tab" onclick="openCity(event, 'london')" id="defaultOpen">London</a>
+        <a class="tab" onclick="openCity(event, 'paris')">Paris</a>
+        <a class="tab" onclick="openCity(event, 'tokyo')">Tokyo</a>
+    </div>
+    <div class="content" id="london">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+        <span onclick="closeTab(event)">x</span>
+    </div>
+    <div class="content" id="paris">
+        <h3>Paris</h3>
+        <p>Paris is the captal of France.</p>
+        <span onclick="closeTab(event)">x</span>
+    </div>
+    <div class="content" id="tokyo">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+        <span onclick="closeTab(event)">x</span>
+    </div>
+
+    <script>
+        document.getElementById("defaultOpen").click();
+
+        function openCity(event, id) {
+            let tabs = document.getElementsByClassName("tab");
+            for(let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+
+            let contents = document.getElementsByClassName("content");
+            for(let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("show");
+            }
+
+            let showContent = document.getElementById(id);
+
+            showContent.classList.add("show");
+            event.currentTarget.classList.add("active");
+        }
+
+        function closeTab(event) {
+            event.currentTarget.parentElement.classList.remove("show");
+        }
+    </script>
+</body>
+
+</html>

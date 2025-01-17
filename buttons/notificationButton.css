@@ -1,0 +1,75 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+    --gray-custom-dark: #262626;
+    --gray-custom-light: #818181;
+    --blue-custom-hover: #0b7dda;
+    --green-custom-hover: #3e8e41;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body > div {
+    margin: 5rem;
+}
+
+.notification {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: var(--gray-custom);
+    color: white;
+    user-select: none;
+    position: relative;
+
+    /* transpatr */
+    /* background-color: inherit; */
+
+}
+
+.transparentBtn {
+    background-color: inherit;
+}
+
+.notification .badge {
+    display: block;
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    line-height: 2rem;
+    width: 2rem;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background-color: red;
+}
+
+.notification:hover {
+    background-color: var(--gray-custom-light);
+}

@@ -1,0 +1,74 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+    --gray-custom-dark: #262626;
+    --gray-custom-light: #818181;
+    --blue-custom-hover: #0b7dda;
+    --green-custom-hover: #3e8e41;
+    --red-custom-hover: #da190b;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    width: 50%;
+    margin: 5rem auto;
+    background-color: var(--paper);
+    color: black;
+}
+
+form .leftAlign, form .rightAlign {
+    margin-bottom: 1rem;
+
+}
+
+form .leftAlign {
+    flex: 25%;
+}
+
+form .rightAlign {
+    flex: 75%;
+}
+
+form input, form select, form textarea {
+    padding: 1rem;
+    font-size: 16xp;
+    display: block;
+    width: 100%;
+    border: 1px solid var(--paperHover);
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 1100px) {
+    form .leftAlign, form .rightAlign {
+        flex: 100%;
+    }
+}
+

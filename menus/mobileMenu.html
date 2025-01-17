@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mobileMenu.css" /> 
+</head>
+
+<body>
+    <div class="menu" id="mobileMenu">
+        <a href="#" class="navItem active" onclick="changeActive(this)">Logo</a>
+        <a href="#" class="navItem" onclick="changeActive(this)">News</a>
+        <a href="#" class="navItem" onclick="changeActive(this)">Contact</a>
+        <a href="#" class="navItem" onclick="changeActive(this)">About</a>
+        <a class="expandBtn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></a>
+    </div>
+    <div class="page">
+        <h2>Vertical Mobile Navbar</h2>
+        <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+        <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("expand")
+        }
+        function changeActive(element) {
+            let tabs = document.getElementsByClassName("navItem");
+            for(let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            element.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+    --gray-custom-dark: #262626;
+    --gray-custom-light: #818181;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    display: contents;
+}
+
+.imgText {
+    border: 3px solid white;
+}
+
+.bg-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* position: relative; */
+    height: 50%;
+}
+
+.img1 {
+    background-image: url(../pictures/img_snow_wide.jpg)
+}
+
+.img2 {
+    background-image: url(../pictures/img_parallax.jpg)
+}
+
+.img3 {
+    background-image: url(../pictures/img_lights_wide.jpg)
+}
+
+.img4 {
+    background-image: url(../pictures/img_nature_wide.jpg)
+}
+
+.img5 {
+    background-image: url(../pictures/img_forest.jpg)
+}
+
+.img6 {
+    background-image: url(../pictures/img_woods_wide.jpg)
+}
+
+.imgText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 20px;
+    padding: 0 8rem;
+    margin-left: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 300;
+}
+
+.imgText h1 {
+    font-size: 80px;
+}
+
+.imgText p {
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.page {
+    height: 200rem;
+}

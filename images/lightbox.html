@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/%FA_ICONS_KEY%.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="lightbox.css" /> 
+</head>
+
+<body>
+    <div class="imageList">
+        <div class="imageBtn">
+            <img src="../pictures/img_woods.jpg" onclick="openOverlay(0)">
+        </div>
+        <div class="imageBtn">
+            <img src="../pictures/img_5terre.jpg" onclick="openOverlay(1)">
+        </div>
+        <div class="imageBtn">
+            <img src="../pictures/img_nature.jpg" onclick="openOverlay(2)">
+        </div>
+        <div class="imageBtn">
+            <img src="../pictures/img_lights.jpg" onclick="openOverlay(3)">
+        </div>
+        <div class="imageBtn">
+            <img src="../pictures/img_mountains.jpg" onclick="openOverlay(4)">
+        </div>
+        <div class="imageBtn">
+            <img src="../pictures/img_snow.jpg" onclick="openOverlay(5)">
+        </div>
+    </div>
+    <div class="lightbox" id="overlay">
+        <a class="closeBtn" onclick="closeOverlay()">&times;</a>
+        <div class="imageContainer">
+            <div class="slide" style="display: block;">
+                <div class="imageIndex">1 / 6</div>
+                <img src="../pictures/img_woods_wide.jpg">
+                <div class="imgTitle">The Woods</div>
+            </div>
+    
+            <div class="slide">
+                <div class="imageIndex">2 / 6</div>
+                <img src="../pictures/img_5terre_wide.jpg">
+                <div class="imgTitle">Cinque Terre</div>
+            </div>
+    
+            <div class="slide">
+                <div class="imageIndex">3 / 6</div>
+                <img src="../pictures/img_nature_wide.jpg">
+                <div class="imgTitle">Mountains and fjords</div>
+            </div>
+    
+            <div class="slide">
+                <div class="imageIndex">4 / 6</div>
+                <img src="../pictures/img_lights_wide.jpg">
+                <div class="imgTitle">Northern Lights</div>
+            </div>
+    
+            <div class="slide">
+                <div class="imageIndex">5 / 6</div>
+                <img src="../pictures/img_mountains_wide.jpg">
+                <div class="imgTitle">Nature and sunrise</div>
+            </div>
+    
+            <div class="slide">
+                <div class="imageIndex">6 / 6</div>
+                <img src="../pictures/img_snow_wide.jpg">
+                <div class="imgTitle">Snowy Mountains</div>
+            </div>
+    
+            <a class="prevBtn navBtn" onclick="prevSlide()">&#10094;</a>
+            <a class="nextBtn navBtn" onclick="nextSlide()">&#10095;</a>
+    
+            <div class="previewList">
+                <div class="previewImg">
+                    <img src="../pictures/img_woods.jpg" onclick="showSlide(0)">
+                </div>
+                <div class="previewImg">
+                    <img src="../pictures/img_5terre.jpg" onclick="showSlide(1)">
+                </div>
+                <div class="previewImg">
+                    <img src="../pictures/img_nature.jpg" onclick="showSlide(2)">
+                </div>
+                <div class="previewImg">
+                    <img src="../pictures/img_lights.jpg" onclick="showSlide(3)">
+                </div>
+                <div class="previewImg">
+                    <img src="../pictures/img_mountains.jpg" onclick="showSlide(4)">
+                </div>
+                <div class="previewImg">
+                    <img src="../pictures/img_snow.jpg" onclick="showSlide(5)">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        let slideIndex = 0;
+        let slideCount = document.getElementsByClassName("slide").length;
+        let maxIndex = slideCount - 1;
+        // showSlide(0);
+
+        function closeOverlay() {
+            let overlay = document.getElementById("overlay");
+            overlay.classList.remove("show");
+        }
+
+        function openOverlay(index) {
+            let overlay = document.getElementById("overlay");
+            overlay.classList.add("show");
+            showSlide(index);
+        }
+
+        function nextSlide() {
+            let newSlide = slideIndex + 1;
+            if (newSlide < slideCount) {
+                showSlide(newSlide);
+            } else {
+                showSlide(0);
+            } 
+        }
+
+        function prevSlide() {
+            if (slideIndex > 0) {
+                showSlide(slideIndex - 1)
+            } else {
+                showSlide(slideCount - 1)
+            }
+        }
+
+        // function showCurrentSlide(index) {
+        //     showSlides(slideIndex = index);
+        // }
+
+        function showSlide(index) {
+            let slides = document.getElementsByClassName("slide");
+            let previews = document.getElementsByClassName("previewImg");
+
+            slideIndex = index;
+
+            for(let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                previews[i].classList.remove("active");
+            }
+
+            slides[slideIndex].style.display = "block";
+            previews[slideIndex].classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

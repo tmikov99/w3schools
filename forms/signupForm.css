@@ -1,0 +1,139 @@
+:root {
+    --primary: #04AA6D;
+    --secondary: #555;
+    --background: #1d2a35;
+    --paper: #f1f1f1;
+    --paperHover: #ddd;
+    --paperFocus: #ccc;
+    --light: white;
+    --dark: black;
+
+    --green-custom: #04AA6D;
+    --blue-custom: #2196F3;
+    --red-custom: #f44336;
+    --gray-custom: #555;
+    --gray-custom-dark: #262626;
+    --gray-custom-light: #818181;
+    --blue-custom-hover: #0b7dda;
+    --green-custom-hover: #3e8e41;
+    --red-custom-hover: #da190b;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    height: 100%;
+}
+
+.modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.modalForm {
+    width: 50%;
+    margin: 100px auto;
+    background-color: white;
+    color: var(--paperHover);
+    max-width: 600px;
+    min-width: 300px;
+    font-size: 16px;
+    cursor: auto;
+}
+
+.header {
+    padding: 1rem 1rem 0;
+    font-size: 16px;
+    border-bottom: 2px solid var(--paper);
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.modalForm input[type=email], .modalForm input[type=password] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--paper);
+    margin-bottom: 2rem;
+    font-size: 15px;
+    line-height: 22.5px;
+}
+
+.modalForm input[type=email]:focus, .modalForm input[type=password]:focus {
+    outline: none;
+    background-color: var(--paperHover);
+}
+
+.modalForm input[type=checkbox] {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    top: 5px;
+}
+
+.modalForm .content {
+    padding: 1.5rem 1rem 0;
+}
+
+.termsLink {
+    color: var(--blue-custom);
+}
+
+.termsLink:hover {
+    color: var(--blue-custom-hover);
+}
+
+.modalForm .footer {
+    padding: 0 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer button {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem 1.5rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cancelBtn {
+    background-color: var(--red-custom);
+}
+
+.cancelBtn:hover {
+    background-color: var(--red-custom-hover);
+}
+
+.confirmBtn {
+    background-color: var(--green-custom);
+}
+
+.confirmBtn:hover {
+    background-color: var(--green-custom-hover);
+}
